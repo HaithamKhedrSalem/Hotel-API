@@ -2,6 +2,7 @@ const url = require('url');
 const sync_request = require('sync-request');
 
 const Hotel = require('../model/hotel.js');
+const HotelError = require('../hotelsError');
 const Query = require('../model/query.js');
 
 
@@ -28,6 +29,9 @@ class HotelAPIController{
      * @url       The rquested url.
      */
     var response = sync_request('GET', this.url);
+    if(response.statusCode != 200){
+      throw new HotelError.FetchHotelsError('Can not fetch hotels.');
+    }
     return JSON.parse(response.getBody('utf8'))
   }
 

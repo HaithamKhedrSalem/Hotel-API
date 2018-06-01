@@ -38,6 +38,15 @@ class DateError extends AppError {
   }
 };
 
+
+class FetchHotelsError extends AppError {
+  constructor (message) {
+    // Providing default message and overriding status code.
+    super(message, 400);
+  }
+};
+
+
 module.exports = {
   PriceError : PriceError,
   DateError : DateError,
