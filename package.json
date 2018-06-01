@@ -1,0 +1,17 @@
+{
+  "name": "docker_web_app",
+  "version": "1.0.0",
+  "description": "Node.js on Docker",
+  "author": "Haitham Khedr <haithamkhedr445@gmail.com>",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "express": "^4.16.1",
+    "request": "^2.87.0",
+    "save-dev": "^2.0.0",
+    "sync-request": "^6.0.0"
+  }
+}
