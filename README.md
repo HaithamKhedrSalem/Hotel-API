@@ -28,3 +28,7 @@ Only available options to `sort_by` are `price` and `name` and for `sort_type` a
 ## UnitTest
  - Run `sudo docker exec tajawal jest` to run all the unittests.
  - Run `sudo docker exec tajawal jest --coverage` to get the unittest coverage.
+
+## CodeClimate:
+ - https://codeclimate.com/github/HaithamKhedrSalem/Hotel-API
+ 
