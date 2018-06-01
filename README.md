@@ -15,6 +15,16 @@
 
 ## API documenation
  - http://localhost:8080/hotels will return all the available hotels.
+    #### Sucess Response
+    ```
+    {"status_code":200, "data":{"hotels":[]}}
+    ```
+    #### Error Response
+    ```
+    {
+    "err_msg": "", "err_name": "", "status_code": 400
+    }
+    ```
  - Only `name`, `city`, `min_price`, `max_price`, `start_date`, `end_date`, `sort_by` and `sort_type` options are valid to be provided in the URL query if anything else is provided the API will ignore it.
  - Filter by `name` http://localhost:8080/hotels?name=Golden%20Tulip will return `Golden Tulip` and if you search with `Tulip Golden`, `Gold`, `Tulip` or `Golden` will also return the same result of `Golden Tulip`.Can search by reversed or partial hotel name.
  - Filter by `city` http://localhost:8080/hotels?city=london will return `Le Meridien` and you can search with partial or reversed city if contains two words.
