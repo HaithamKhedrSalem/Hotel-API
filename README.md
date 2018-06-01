@@ -25,7 +25,7 @@
  - Sorting by `name` or `price` by providing `sort_by=name` or `sort_by=price` and you can provide the type of sort which can be ascending(`sort_type=asc`) or descending sort(`sort_type=desc`)   http://localhost:8080/hotels?sort_by=name&sort_type='asc' and  http://localhost:8080/hotels?sort_by=price&sort_type='desc'
 Only available options to `sort_by` are `price` and `name` and for `sort_type` are `asc` and `desc` if anything else is provided it will return this error JSON. If `sort_by` is provided and `sort_type` is not the default value is `desc`.
 
-## UnitTest
+## UnitTest - (Open New Terminal)
  - Run `sudo docker exec tajawal jest` to run all the unittests.
  - Run `sudo docker exec tajawal jest --coverage` to get the unittest coverage.
 
