@@ -31,3 +31,6 @@ Only available options to `sort_by` are `price` and `name` and for `sort_type` a
 
 ## CodeClimate:
  [![Maintainability](https://api.codeclimate.com/v1/badges/71e70cef44de36422b0a/maintainability)](https://codeclimate.com/github/HaithamKhedrSalem/Hotel-API/maintainability)
+
+## Travis
+ [![Build Status](https://travis-ci.org/HaithamKhedrSalem/Hotel-API.svg?branch=master)](https://travis-ci.org/HaithamKhedrSalem/Hotel-API)
