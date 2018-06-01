@@ -2,8 +2,8 @@
 
 ## Setup
   - Pull the repo and cd to the directory.
-  - Run `docker build -t tajawal .`
-  - Run `docker run --name tajawal -p 8080:8080 tajawal`
+  - Run `sudo docker build -t tajawal .`
+  - Run `sudo docker run --name tajawal -p 8080:8080 tajawal`
 
 ## Architecture
   - `HotelAPIController` is responsible for fetch all hotels.
