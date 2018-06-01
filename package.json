@@ -7,7 +7,7 @@
   "scripts": {
     "preinstall": "npm install -g jest",
     "start": "node server.js",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "dependencies": {
     "express": "^4.16.1",
