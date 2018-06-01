@@ -5,6 +5,7 @@
   "author": "Haitham Khedr <haithamkhedr445@gmail.com>",
   "main": "server.js",
   "scripts": {
+    "preinstall": "npm install -g jest",
     "start": "node server.js",
     "test": "jest"
   },
