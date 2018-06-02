@@ -2,6 +2,14 @@ const HotelAPIController = require('../service/apiController');
 const testControllers  = require('./testControllers.js');
 
 
+test('Test invalid fetch all hotels.', () => { 
+    var hotelAPIController = new HotelAPIController(); 
+    var hotelsList = hotelAPIController.fetchAllHotels();  
+    expect('hotels' in hotelsList).toEqual(true);
+    expect(Array.isArray(hotelsList['hotels'])).toEqual(true);
+});
+
+
 test('Test convert json hotels to objects.', () => {
     var hotelAPIController = new HotelAPIController();
     var hotelsList = JSON.parse(
@@ -15,6 +23,6 @@ test('Test convert json hotels to objects.', () => {
 test('Test convert json query to Query object.', () => {
     var hotelAPIController = new HotelAPIController();
     var query = hotelAPIController.convertQueryToObject(
-    	{'price': 100, 'name': 'golden'});
+      {'price': 100, 'name': 'golden'});
     expect(query.constructor.name).toEqual('Query');
 });

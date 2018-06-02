@@ -7,8 +7,8 @@
 
 ## Architecture
   - `HotelAPIController` is responsible for fetch all hotels.
-  - `ParsingDecorator` is responsible for parsing price and date range to valid data. It is an implementation of `Decorator` design pattern where `ParsingDecorator` decorate `Query`. `PriceRangeParse` and `DateRangeParse` extend `ParsingDecorator` and implement `parse` method to parse the price range and date range.
-  - `ValidationDecorator` is responsible for validating all the url parameters. It is an implementation of `Decorator` design pattern where `ValidationDecorator` decorate `Query`. `PriceRangeValidation`, `DateRangeValidation` and `SortValidation` extend `ValidationDecorator` and implement the `validate` method which validate the price and date ranges and the sort parameters.
+  - `Parsing` is responsible for parsing price and date range to valid data. `PriceRangeParse` and `DateRangeParse` extend `ParsingDecorator` and implement `parse` method to parse the price range and date range.
+  - `ValidationDecorator` is responsible for validating all the url parameters. `PriceRangeValidation`, `DateRangeValidation` and `SortValidation` extend `ValidationDecorator` and implement the `validate` method which validate the price and date ranges and the sort parameters.
   - `Filter` is responsible for filtering the hotels list according to the passed parameters in the query url. It is an implementation of the `Chain of Responsiblity` design pattern.
   - `Sort` is responsible for sorting the hotels list according to the the sort parameters in the query url. It is an implementation of `strategy design pattern` wherer `HotelNameSort` and `HotelPriceSort` are the two strategies.
   - `HotelProbertySortFactory` is responsible for creating one of the two sort strategies depending on the sort parameters.
