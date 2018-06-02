@@ -1,22 +1,29 @@
-const ParseValidation = require('../controller/validationParse');
+const DateRangeParse = require('../controller/parse/dateRangeParse');
+const PriceRangeParse = require('../controller/parse/priceRangeParse');
+const DateRangeValidation = require('../controller/validation/dateRangeValidation');
+const PriceRangeValidation = require('../controller/validation/priceRangeValidation');
+const SortValidation = require('../controller/validation/sortValidation');
+
 
 const Hotel = require('./apiController');
-const HotelFilter = require('../controller/filter');
-const HotelSort = require('../controller/sort');
+const FilterPipeline = require('../controller/filter/pipeline');
+const HotelProbertySortFactory = require('../controller/sort/sortFactory');
+const HotelSort = require('../controller/sort/sort');
+
 
 class HotelAPI{
 
   static filter(hotelsDictList, query){
-    ParseValidation.PriceRangeParse.parse(query);
-    ParseValidation.PriceRangeValidation.validate(query);
-    ParseValidation.DateRangeParse.parse(query);
-    ParseValidation.DateRangeValidation.validate(query);
-    ParseValidation.SortValidation.validate(query);
-    HotelFilter.filterPipeline.filter(hotelsDictList, query);
+    PriceRangeParse.parse(query);
+    PriceRangeValidation.validate(query);
+    DateRangeParse.parse(query);
+    DateRangeValidation.validate(query);
+    SortValidation.validate(query);
+    FilterPipeline.filter(hotelsDictList, query);
   }
 
   static sort(hotelsDictList, query){
-    var hotelProbertySort = HotelSort.HotelProbertySortFactory.
+    var hotelProbertySort = HotelProbertySortFactory.
       createHotelPropertySort(query);
     if(hotelProbertySort != null){
       var hotelSort = new HotelSort.HotelsList();

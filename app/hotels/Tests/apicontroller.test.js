@@ -2,12 +2,6 @@ const HotelAPIController = require('../service/apiController');
 const testControllers  = require('./testControllers.js');
 
 
-test('Test invalid fetch all hotels.', () => {
-    var hotelAPIController = new HotelAPIController();
-    var hotelsList = hotelAPIController.fetchAllHotels();
-    expect(hotelsList.hotels.length).toEqual(6);
-});
-
 test('Test convert json hotels to objects.', () => {
     var hotelAPIController = new HotelAPIController();
     var hotelsList = JSON.parse(

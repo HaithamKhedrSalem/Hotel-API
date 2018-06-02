@@ -1,11 +1,6 @@
-const url = require('url');
-const sync_request = require('sync-request');
-
-const DateError = require('./hotelsError');
 const Response = require('./response.js');
 const HotelAPI = require('./service/api');
 const HotelAPIController = require('./service/apiController');
-const PriceError = require('./hotelsError');
 
 
 module.exports = function(app) {
